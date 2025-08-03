@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" href="D:\get job\poaster.jpg" type="image/x-icon">
+   
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GET JOB - Software Jobs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f0f2f5;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      height: 50px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .search-bar {
+      margin: 20px auto;
+      text-align: center;
+    }
+
+    .search-bar input {
+      width: 80%;
+      max-width: 400px;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .job-card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .job-card h3 {
+      margin-top: 0;
+      color: #003366;
+    }
+
+    .job-card .date {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .apply-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .apply-btn:hover {
+      background-color: #005fa3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/HD_transparent_picture.png/600px-HD_transparent_picture.png" alt="Logo">
+    <span style="font-size: 24px; font-weight: bold;">GET JOB</span><br>
+    <small>Find Your Dream Software Job</small>
+  </header>
+
+  <div class="search-bar">
+    <input type="text" id="searchInput" onkeyup="filterJobs()" placeholder="Search jobs by company, role, or skill...">
+  </div>
+
+  <div class="container" id="jobList">
+    <div class="job-card">
+      <h3>Software Engineer – Infosys</h3>
+      <p class="date">Posted on: 01-Aug-2025</p>
+      <a href="https://www.infosys.com/careers" class="apply-btn" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="job-card">
+      <h3>Frontend Developer – TCS</h3>
+      <p class="date">Posted on: 30-Jul-2025</p>
+      <a href="https://www.tcs.com/careers" class="apply-btn" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="job-card">
+      <h3>Java Backend Developer – Wipro</h3>
+      <p class="date">Posted on: 28-Jul-2025</p>
+      <a href="https://careers.wipro.com" class="apply-btn" target="_blank">Apply Now</a>
+    </div>
+
+    <div class="job-card">
+      <h3>Full Stack Developer – Accenture</h3>
+      <p class="date">Posted on: 26-Jul-2025</p>
+      <a href="https://www.accenture.com/in-en/careers" class="apply-btn" target="_blank">Apply Now</a>
+    </div>
+
+    <!-- Add more job-cards as needed -->
+  </div>
+
+  <script>
+    function filterJobs() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const jobCards = document.querySelectorAll(".job-card");
+      jobCards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        card.style.display = text.includes(input) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
